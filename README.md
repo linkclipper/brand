@@ -1,0 +1,26 @@
+# LinkClipper brand
+
+Assets and the visual system for the LinkClipper org. Anything reusable (icons, screenshots, colors, logo source) lives here so release notes, the site, and the store listing all pull from one place.
+
+## Layout
+
+| Path | Contents |
+|---|---|
+| `icons/icon16/32/48/128.png` | The extension icon set (source of truth; copy into `linkclipper/icons/`) |
+| `webstore-screenshots/` | Store listing screenshots (1280×800), regenerated via `linkclipper/dashboard/dev.html?state=…` |
+| `brand-system.md` | Colors, type, UI language |
+
+## Regenerating store screenshots
+
+Screenshots are produced from the dev harness so no store build is needed:
+
+```powershell
+& "C:\Program Files\Google\Chrome\Application\chrome.exe" `
+  --headless=new --disable-gpu --hide-scrollbars --window-size=1280,800 `
+  --screenshot="webstore-1-grid.png" --virtual-time-budget=12000 `
+  "file:///C:/Users/Neo/Videos/Webapps/WebCollector/dashboard/dev.html?state="
+```
+
+States: `""` grid · `reader` · `item` (edit modal). After edits, **visually inspect each PNG** (read it), then copy into this repo and into `linkclipper.github.io/assets/` (the site README embeds them by stable filename).
+
+Rules: current UI only (stale screenshots = rejected listing copy), seeded content must not overclaim features, regenerate whenever the dashboard visual language changes.
