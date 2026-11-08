@@ -24,7 +24,7 @@ Aurora background = 4 fixed radial gradients (blue top-left, purple top-right, p
 - **Glass, no blur.** Translucent gradients + 1px light borders + soft glow read as glass; `backdrop-filter` is banned (see Knowledgebase, Windows GPU artifacts).
 - **Purple = action.** Gradients only on primary buttons (Save, New board, Play). Action icon chips hover to *solid* saturated color with dark ink.
 - **Type**: system stack, medium weights; titles 500–600, metadata 400. No custom webfonts in the extension (no remote code policy).
-- **Logos/wordmark**: "LinkClipper" one word, capital L and C always. The glyph is the `W` roundel on brand gradient (see `icons/`).
+- **Logos/wordmark**: "LinkClipper" one word, capital L and C always. The mark is two linked loops on the brand gradient — a saved link, not the former WebCollector `W`. `icons/mark.svg` is the vector reference; keep extension, site and store artwork identical. Do not use text glyphs or emoji as a substitute.
 
 ## Store copy voice
 
